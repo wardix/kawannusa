@@ -45,7 +45,7 @@ export const Login = () => {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10 border border-gray-200">
           <form className="space-y-6" onSubmit={handleLogin}>
-            
+
             {error && (
               <div className="p-3 bg-red-50 text-red-700 rounded-md text-sm">
                 {error}
@@ -66,7 +66,7 @@ export const Login = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="block w-full pl-10 sm:text-sm border-gray-300 rounded-md h-10 border focus:ring-green-500 focus:border-green-500"
+                  className="block w-full pl-10 sm:text-sm border-gray-300 rounded-md h-10 border bg-white text-gray-900 focus:ring-green-500 focus:border-green-500"
                   placeholder="anda@email.com"
                 />
               </div>
@@ -86,7 +86,7 @@ export const Login = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="block w-full pl-10 sm:text-sm border-gray-300 rounded-md h-10 border focus:ring-green-500 focus:border-green-500"
+                  className="block w-full pl-10 sm:text-sm border-gray-300 rounded-md h-10 border bg-white text-gray-900 focus:ring-green-500 focus:border-green-500"
                   placeholder="••••••••"
                 />
               </div>
