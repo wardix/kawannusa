@@ -28,14 +28,26 @@ export const Topbar = () => {
                     <Bell className="w-6 h-6" />
                 </button>
 
-                <Link to="/profil" className="flex items-center gap-3 ml-2 pl-4 border-l border-gray-200 hover:opacity-80 transition-opacity">
-                    <img
-                        className="h-8 w-8 rounded-full object-cover border border-gray-200"
-                        src="https://ui-avatars.com/api/?name=Rupert+Alexander&background=0D8ABC&color=fff"
-                        alt="User profile"
-                    />
-                    <span className="text-sm font-medium text-green-700 hidden md:block">Rupert Alexander</span>
-                </Link>
+                <div className="dropdown dropdown-end ml-2 pl-4 border-l border-gray-200">
+                    <div tabIndex={0} role="button" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                        <img
+                            className="h-8 w-8 rounded-full object-cover border border-gray-200"
+                            src="https://ui-avatars.com/api/?name=Rupert+Alexander&background=0D8ABC&color=fff"
+                            alt="User profile"
+                        />
+                        <span className="text-sm font-medium text-green-700 hidden md:block">Rupert Alexander</span>
+                    </div>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52 mt-4 text-sm text-gray-700 border border-gray-100">
+                        <li><Link to="/profil">Profile Saya</Link></li>
+                        <li>
+                            <button onClick={() => {
+                                localStorage.removeItem('token');
+                                window.dispatchEvent(new Event('auth-change'));
+                                // navigate will be handled by App.tsx since auth state changes
+                            }} className="text-red-600 hover:bg-red-50 hover:text-red-700">Logout</button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
     );
