@@ -307,7 +307,7 @@ export const Profil = () => {
                             <div className="absolute right-4 top-4">
                                 <input
                                     type="checkbox"
-                                    className="toggle toggle-success toggle-sm"
+                                    className="toggle toggle-success toggle-sm border-gray-300 bg-gray-200 checked:border-green-500 checked:bg-green-500"
                                     checked={!!user.pref_updates_enabled}
                                     onChange={e => setUser({ ...user, pref_updates_enabled: e.target.checked ? 1 : 0 })}
                                 />
@@ -329,7 +329,7 @@ export const Profil = () => {
                             <div className="absolute right-4 top-4">
                                 <input
                                     type="checkbox"
-                                    className="toggle toggle-success toggle-sm"
+                                    className="toggle toggle-success toggle-sm border-gray-300 bg-gray-200 checked:border-green-500 checked:bg-green-500"
                                     checked={!!user.pref_auto_withdraw}
                                     onChange={e => setUser({ ...user, pref_auto_withdraw: e.target.checked ? 1 : 0 })}
                                 />
