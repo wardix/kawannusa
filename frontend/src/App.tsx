@@ -6,6 +6,7 @@ import { CustomerSaya } from './pages/customer-saya/CustomerSaya';
 import { ProdukLayanan } from './pages/produk-layanan/ProdukLayanan';
 import { Profil } from './pages/profil/Profil';
 import { Login } from './pages/auth/Login';
+import { Beranda } from './pages/beranda/Beranda';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
@@ -27,7 +28,8 @@ function App() {
           isAuthenticated ? (
             <Layout>
               <Routes>
-                <Route path="/" element={<Navigate to="/poin-saya" replace />} />
+                <Route path="/" element={<Navigate to="/beranda" replace />} />
+                <Route path="/beranda" element={<Beranda />} />
                 <Route path="/poin-saya" element={<PoinSaya />} />
                 <Route path="/customer-saya" element={<CustomerSaya />} />
                 <Route path="/produk-layanan" element={<ProdukLayanan />} />

@@ -5,7 +5,7 @@ export const Sidebar = () => {
     const location = useLocation();
 
     const navItems = [
-        { name: 'Beranda', icon: Home, path: '/beranda' }, // Optional, not shown in requirements but exists in UI
+        { name: 'Beranda', icon: Home, path: '/beranda' },
         { name: 'Customer Saya', icon: Users, path: '/customer-saya' },
         { name: 'Produk dan Layanan', icon: Box, path: '/produk-layanan' },
         { name: 'Poin Saya', icon: Coins, path: '/poin-saya' }, // Changed from Komisi to Poin

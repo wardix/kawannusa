@@ -8,6 +8,7 @@ import { points } from './routes/points';
 import { products } from './routes/products';
 import { customers } from './routes/customers';
 import { webhook } from './routes/webhook';
+import dashboard from './routes/dashboard';
 
 const app = new Hono();
 
@@ -25,6 +26,7 @@ app.route('/api/points', points);
 app.route('/api/products', products);
 app.route('/api/customers', customers);
 app.route('/api/webhook', webhook);
+app.route('/api/dashboard', dashboard);
 
 // Initialize DB structure when server starts
 dbInit().catch(console.error);
