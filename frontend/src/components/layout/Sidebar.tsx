@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Users, Box, Coins, BookOpen, Settings } from 'lucide-react';
+import { Home, Users, Box, Coins, BookOpen } from 'lucide-react';
 
 export const Sidebar = () => {
     const location = useLocation();
@@ -13,7 +13,6 @@ export const Sidebar = () => {
 
     const bottomNavItems = [
         { name: 'Edukasi', icon: BookOpen, path: '/edukasi' },
-        { name: 'Pengaturan', icon: Settings, path: '/profil' }, // Directing Settings to Profil based on context
     ];
 
     const renderNavItems = (items: typeof navItems) => (
@@ -25,8 +24,8 @@ export const Sidebar = () => {
                         <Link
                             to={item.path}
                             className={`flex items-center gap-3 px-4 py-3 rounded-lg font-medium transition-colors ${isActive
-                                    ? 'bg-green-600 text-white hover:bg-green-700'
-                                    : 'text-gray-600 hover:bg-green-50 hover:text-green-700'
+                                ? 'bg-green-600 text-white hover:bg-green-700'
+                                : 'text-gray-600 hover:bg-green-50 hover:text-green-700'
                                 }`}
                         >
                             <item.icon className={`w-5 h-5 ${isActive ? 'text-white' : 'text-gray-400'}`} />
